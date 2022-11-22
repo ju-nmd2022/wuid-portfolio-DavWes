@@ -15,19 +15,45 @@
 }
 
 .hero {
-  animation-name: move;
   height: 120px;
-  border: 3px solid white;
   text-align: center;
+  vertical-align: middle;
+  line-height: 120px;
   background: linear-gradient(
-      20deg,
-      rgb(0, 0, 0),
-      rgb(232, 56, 255),
-      rgb(245, 255, 46),
-      rgb(27, 50, 255),
-      rgb(44, 255, 251)
-    )
-    0 0 / 1000% no-repeat;
+    45deg,
+    #8700ff,
+    #00ff00,
+    #d9ff02,
+    #ff0000,
+    #ff008c,
+    #00eeff
+  );
+  background-size: 600% 100%;
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
+}
+
+.text-fade {
+  animation: text-fade 4s;
+}
+
+@keyframes text-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 
 h1 {
